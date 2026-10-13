@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facultades - UNDC</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- BARRA INSTITUCIONAL -->
+    <div class="barra-info">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center flex-wrap gap-1">
+                <div class="info-fila">
+                    <a href="#"><i class="bi bi-laptop"></i> Campus Virtual</a>
+                    <span class="separador">|</span>
+                    <a href="#"><i class="bi bi-book"></i> Biblioteca</a>
+                    <span class="separador">|</span>
+                    <a href="#"><i class="bi bi-shield-check"></i> Transparencia</a>
+                    <span class="separador">|</span>
+                    <a href="#"><i class="bi bi-inbox"></i> Mesa de Partes</a>
+                </div>
+                <div class="info-fila">
+                    <a href="#"><i class="bi bi-telephone"></i> Contacto</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-undc sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="Public/UNDC_logo_transp.png" alt="Logo de la Universidad Nacional de Cañete" class="navbar-logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarPrincipal" aria-controls="navbarPrincipal" aria-expanded="false" aria-label="Abrir menú de navegación">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarPrincipal">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="universidad.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Universidad
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="resena.html">Reseña histórica</a></li>
+                            <li><a class="dropdown-item" href="mision-vision.html">Misión y visión</a></li>
+                            <li><a class="dropdown-item" href="rectorado.html">Rectorado</a></li>
+                            <li><hr class="dropdown-divider-undc"></li>
+                            <li><a class="dropdown-item" href="documentos.html">Documentos UNDC</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="facultades.html" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-current="page">Facultades</a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="facultades.html">Ciencias Empresariales</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="administracion.html">Administración</a></li>
+                                    <li><a class="dropdown-item" href="turismo-hoteleria.html">Administración de Turismo y Hotelería</a></li>
+                                    <li><a class="dropdown-item" href="contabilidad.html">Contabilidad</a></li>
+                                    <li><a class="dropdown-item" href="derecho.html">Derecho y Ciencias Políticas</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="facultades.html">Ingeniería</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="ingenieria-sistemas.html">Ingeniería de Sistemas</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="facultades.html">Ciencias Agrarias</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="agronomia.html">Agronomía</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="postgrado.html">Postgrado</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HEADER -->
+    <section class="page-header">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb breadcrumb-custom mb-2">
+                    <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Facultades</li>
+                </ol>
+            </nav>
+            <h1>Facultades</h1>
+            <p class="lead">Conoce nuestras facultades y programas académicos</p>
+        </div>
+    </section>
+
+    <!-- CONTENIDO -->
+    <main class="page-content">
+        <div class="container">
+
+            <!-- Facultad de Ciencias Empresariales -->
+            <section class="facultad-detalle mb-4 fade-in">
+                <div class="facultad-card">
+                    <h2 class="facultad-titulo">Facultad de Ciencias Empresariales</h2>
+                    <div class="row g-4">
+                        <div class="col-md-6 col-lg-3">
+                            <a href="administracion.html" class="escuela-item">
+                                <img src="Public/escudo-administracion.png" class="escuela-escudo" alt="Escudo de la Escuela Profesional de Administración">
+                                <span class="escuela-nombre">Escuela Profesional de Administración</span>
+                            </a>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <a href="derecho.html" class="escuela-item">
+                                <img src="Public/escudo-derecho.jpeg" class="escuela-escudo" alt="Escudo de la Escuela Profesional de Derecho y Ciencias Políticas">
+                                <span class="escuela-nombre">Escuela Profesional de Derecho y Ciencias Políticas</span>
+                            </a>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <a href="turismo-hoteleria.html" class="escuela-item">
+                                <img src="Public/escudo-turismo.jpg" class="escuela-escudo" alt="Escudo de la Escuela Profesional de Administración de Turismo y Hotelería">
+                                <span class="escuela-nombre">Escuela Profesional de Administración de Turismo y Hotelería</span>
+                            </a>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <a href="contabilidad.html" class="escuela-item">
+                                <img src="Public/escudo-contabilidad.jpeg" class="escuela-escudo" alt="Escudo de la Escuela Profesional de Contabilidad">
+                                <span class="escuela-nombre">Escuela Profesional de Contabilidad</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Facultad de Ingeniería -->
+            <section class="facultad-detalle mb-4 fade-in">
+                <div class="facultad-card">
+                    <h2 class="facultad-titulo">Facultad de Ingeniería</h2>
+                    <div class="row g-4">
+                        <div class="col-md-6 col-lg-3">
+                            <a href="ingenieria-sistemas.html" class="escuela-item">
+                                <img src="Public/escudo-sistemas.png" class="escuela-escudo" alt="Escudo de la Escuela Profesional de Ingeniería de Sistemas">
+                                <span class="escuela-nombre">Escuela Profesional de Ingeniería de Sistemas</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Facultad de Ciencias Agrarias -->
+            <section class="facultad-detalle mb-4 fade-in">
+                <div class="facultad-card">
+                    <h2 class="facultad-titulo">Facultad de Ciencias Agrarias</h2>
+                    <div class="row g-4">
+                        <div class="col-md-6 col-lg-3">
+                            <a href="agronomia.html" class="escuela-item">
+                                <img src="Public/escudo-agronomia.png" class="escuela-escudo" alt="Escudo de la Escuela Profesional de Agronomía">
+                                <span class="escuela-nombre">Escuela Profesional de Agronomía</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Resumen -->
+            <section class="fade-in">
+                <div class="facultad-card p-4 text-center">
+                    <h3 style="color: var(--undc-azul);"><i class="bi bi-bar-chart me-2"></i>Resumen de programas</h3>
+                    <div class="row g-3 mt-2">
+                        <div class="col-md-4">
+                            <div class="stat-box">
+                                <span class="stat-number" style="color: var(--undc-azul);">6</span>
+                                <span class="stat-label">Programas de pregrado</span>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="stat-box">
+                                <span class="stat-number" style="color: var(--undc-verde);">3</span>
+                                <span class="stat-label">Facultades</span>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="stat-box">
+                                <span class="stat-number" style="color: var(--undc-rojo);">+2000</span>
+                                <span class="stat-label">Estudiantes</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer-undc">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <p class="footer-title">Universidad Nacional de Cañete</p>
+                    <p>Formando profesionales con responsabilidad social y compromiso con el desarrollo regional y nacional.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-youtube"></i></a>
+                        <a href="#"><i class="bi bi-twitter-x"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <p class="footer-title">Enlaces rápidos</p>
+                    <ul>
+                        <li><a href="universidad.html">Universidad</a></li>
+                        <li><a href="facultades.html">Facultades</a></li>
+                        <li><a href="postgrado.html">Postgrado</a></li>
+                        <li><a href="#">Admisión</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <p class="footer-title">Facultades</p>
+                    <ul>
+                        <li><a href="facultades.html">Ciencias Empresariales</a></li>
+                        <li><a href="facultades.html">Ingeniería</a></li>
+                        <li><a href="facultades.html">Ciencias Agrarias</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <p class="footer-title">Contacto</p>
+                    <ul>
+                        <li><i class="bi bi-telephone"></i> Admisión: 967 279 139</li>
+                        <li><i class="bi bi-telephone"></i> CePre: 967 279 159</li>
+                        <li><i class="bi bi-envelope"></i> informes@undc.edu.pe</li>
+                        <li><i class="bi bi-geo-alt"></i> San Vicente de Cañete</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 Universidad Nacional de Cañete - Todos los derechos reservados
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+
+</body>
+</html>

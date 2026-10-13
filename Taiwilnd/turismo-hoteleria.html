@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Administración de Turismo y Hotelería | Universidad Nacional de Cañete</title>
+  <meta name="description" content="Escuela Profesional de Administración de Turismo y Hotelería · Facultad de Ciencias Empresariales" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="js/tailwind.config.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body class="bg-white font-sans text-slate-800 antialiased">
+<header class="sticky top-0 z-50" data-nav-root>
+
+    <!-- TOPBAR -->
+    <div class="hidden bg-undc-900 text-slate-200 lg:block">
+      <div class="mx-auto flex h-10 max-w-7xl items-center justify-between px-6 text-sm lg:px-8">
+        <div class="flex items-center gap-6">
+          <a href="tel:+51063421365" class="flex items-center gap-2 transition hover:text-white">
+            <svg class="h-4 w-4 text-gold-500" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106a1.125 1.125 0 00-1.173.417l-.97 1.293a.75.75 0 01-.9.27 12.042 12.042 0 01-4.462-4.462.75.75 0 01.27-.9l1.293-.97c.375-.282.545-.76.417-1.173L6.842 3.852a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 5.25v1.5z"/></svg>
+            (063) 421365
+          </a>
+          <a href="mailto:tramite@undc.edu.pe" class="flex items-center gap-2 transition hover:text-white">
+            <svg class="h-4 w-4 text-gold-500" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
+            tramite@undc.edu.pe
+          </a>
+        </div>
+        <div class="flex items-center gap-4">
+          <a href="https://aulavirtual.undc.edu.pe/" target="_blank" rel="noopener" class="transition hover:text-gold-400">Aula Virtual</a>
+          <span class="h-4 w-px bg-white/20"></span>
+          <a href="https://tramite.undc.edu.pe/" target="_blank" rel="noopener" class="transition hover:text-gold-400">Trámite documentario</a>
+          <span class="h-4 w-px bg-white/20"></span>
+          <a href="#" class="transition hover:text-gold-400">Transparencia</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <div class="border-b border-slate-200 bg-white/95 backdrop-blur">
+      <nav class="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-8">
+
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-3">
+          <img src="public/UNDC_logo_transp.png" alt="Universidad Nacional de Cañete" class="h-12 w-auto object-contain">
+          <span class="leading-tight">
+            <span class="block text-sm font-extrabold text-undc-900 sm:text-base">Universidad Nacional</span>
+            <span class="block text-xs font-medium text-slate-500 sm:text-sm">de Cañete</span>
+          </span>
+        </a>
+
+        <!-- Menú de computadora -->
+        <div class="hidden items-center gap-1 lg:flex">
+
+          <!-- Universidad (dropdown) -->
+          <div class="relative">
+            <button type="button" data-panel-trigger="universidad" aria-expanded="false" aria-haspopup="true"
+              class="inline-flex items-center gap-1.5 rounded-full px-4 py-2 text-sm font-semibold text-undc-800 transition hover:bg-undc-50 hover:text-undc-600">
+              Universidad
+              <svg data-chevron class="h-4 w-4 text-undc-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
+            </button>
+            <div data-panel="universidad" data-open="false"
+              class="absolute left-0 top-full mt-2 w-60 overflow-hidden rounded-lg border border-slate-200 bg-white py-1 shadow-soft">
+              <a href="resena-historica.html" class="block px-4 py-2.5 text-sm font-medium text-undc-700 transition hover:bg-undc-700 hover:text-white">Reseña histórica</a>
+              <a href="mision-vision.html" class="block px-4 py-2.5 text-sm font-medium text-undc-700 transition hover:bg-undc-700 hover:text-white">Misión y visión</a>
+              <a href="rectorado.html" class="block px-4 py-2.5 text-sm font-medium text-undc-700 transition hover:bg-undc-700 hover:text-white">Rectorado</a>
+              <a href="documentos.html" class="block px-4 py-2.5 text-sm font-medium text-undc-700 transition hover:bg-undc-700 hover:text-white">Documentos UNDC</a>
+            </div>
+          </div>
+
+          <!-- Facultades (dropdown) -->
+          <div class="relative">
+            <button type="button" data-panel-trigger="facultades" aria-expanded="false" aria-haspopup="true"
+              class="inline-flex items-center gap-1.5 rounded-full px-4 py-2 text-sm font-semibold text-undc-800 transition hover:bg-undc-50 hover:text-undc-600">
+              Facultades
+              <svg data-chevron class="h-4 w-4 text-undc-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
+            </button>
+
+            <div data-panel="facultades" data-open="false"
+              class="absolute left-0 top-full mt-2 w-80 overflow-hidden rounded-lg border border-slate-200 bg-white p-2 shadow-soft">
+              <p class="px-3 pb-1 pt-2 text-xs font-extrabold uppercase tracking-[0.2em] text-undc-600">Facultades</p>
+
+              <!-- Ciencias Empresariales -->
+              <a href="ciencias-empresariales.html" class="block rounded-lg px-3 py-2 text-sm font-semibold text-undc-900 transition hover:bg-undc-50">Ciencias Empresariales</a>
+              <div class="relative mb-1">
+                <span class="pointer-events-none absolute bottom-2 left-[21px] top-2 w-px bg-slate-200"></span>
+                <ul class="space-y-0.5">
+                  <li>
+                    <a href="administracion.html" class="group/st flex items-center gap-2 rounded-lg px-3 py-1.5 text-sm text-slate-600 transition hover:bg-undc-50 hover:text-undc-700">
+                      <span class="relative z-10 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-white text-xs text-undc-400 ring-1 ring-slate-200">→</span>
+                      <span>Administración</span>
+                      <svg class="ml-auto h-3.5 w-3.5 -translate-x-1 text-undc-600 opacity-0 transition-all group-hover/st:translate-x-0 group-hover/st:opacity-100" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+                    </a>
+                  </li>
+                  <li class="relative z-10 flex justify-start pl-[15px] leading-none">
+                    <svg class="h-3.5 w-3.5 text-undc-200" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
+                  </li>
+                  <li>
+                    <a href="derecho.html" class="group/st flex items-center gap-2 rounded-lg px-3 py-1.5 text-sm text-slate-600 transition hover:bg-undc-50 hover:text-undc-700">
+                      <span class="relative z-10 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-white text-xs text-undc-400 ring-1 ring-slate-200">→</span>
+                      <span>Derecho</span>
+                      <svg class="ml-auto h-3.5 w-3.5 -translate-x-1 text-undc-600 opacity-0 transition-all group-hover/st:translate-x-0 group-hover/st:opacity-100" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+                    </a>
+                  </li>
+                  <li class="relative z-10 flex justify-start pl-[15px] leading-none">
+                    <svg class="h-3.5 w-3.5 text-undc-200" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
+                  </li>
+                  <li>
+                    <a href="contabilidad.html" class="group/st flex items-center gap-2 rounded-lg px-3 py-1.5 text-sm text-slate-600 transition hover:bg-undc-50 hover:text-undc-700">
+                      <span class="relative z-10 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-white text-xs text-undc-400 ring-1 ring-slate-200">→</span>
+                      <span>Contabilidad</span>
+                      <svg class="ml-auto h-3.5 w-3.5 -translate-x-1 text-undc-600 opacity-0 transition-all group-hover/st:translate-x-0 group-hover/st:opacity-100" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+                    </a>
+                  </li>
+                  <li class="relative z-10 flex justify-start pl-[15px] leading-none">
+                    <svg class="h-3.5 w-3.5 text-undc-200" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
+                  </li>
+                  <li>
+                    <a href="turismo-hoteleria.html" class="group/st flex items-center gap-2 rounded-lg px-3 py-1.5 text-sm text-slate-600 transition hover:bg-undc-50 hover:text-undc-700">
+                      <span class="relative z-10 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-white text-xs text-undc-400 ring-1 ring-slate-200">→</span>
+                      <span>Hotelería y Turismo</span>
+                      <svg class="ml-auto h-3.5 w-3.5 -translate-x-1 text-undc-600 opacity-0 transition-all group-hover/st:translate-x-0 group-hover/st:opacity-100" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Ingeniería -->
+              <a href="ingenieria.html" class="block rounded-lg px-3 py-2 text-sm font-semibold text-undc-900 transition hover:bg-undc-50">Ingeniería</a>
+              <div class="relative mb-1">
+                <ul class="space-y-0.5">
+                  <li>
+                    <a href="ingenieria-sistemas.html" class="group/st flex items-center gap-2 rounded-lg px-3 py-1.5 text-sm text-slate-600 transition hover:bg-undc-50 hover:text-undc-700">
+                      <span class="relative z-10 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-white text-xs text-undc-400 ring-1 ring-slate-200">→</span>
+                      <span>Ingeniería de Sistemas</span>
+                      <svg class="ml-auto h-3.5 w-3.5 -translate-x-1 text-undc-600 opacity-0 transition-all group-hover/st:translate-x-0 group-hover/st:opacity-100" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Ciencias Agrarias -->
+              <a href="ciencias-agrarias.html" class="block rounded-lg px-3 py-2 text-sm font-semibold text-undc-900 transition hover:bg-undc-50">Ciencias Agrarias</a>
+              <div class="relative mb-1">
+                <ul class="space-y-0.5">
+                  <li>
+                    <a href="agronomia.html" class="group/st flex items-center gap-2 rounded-lg px-3 py-1.5 text-sm text-slate-600 transition hover:bg-undc-50 hover:text-undc-700">
+                      <span class="relative z-10 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-white text-xs text-undc-400 ring-1 ring-slate-200">→</span>
+                      <span>Agronomía</span>
+                      <svg class="ml-auto h-3.5 w-3.5 -translate-x-1 text-undc-600 opacity-0 transition-all group-hover/st:translate-x-0 group-hover/st:opacity-100" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <a href="facultades.html" class="mt-1 block rounded-lg border-t border-slate-100 px-3 py-2 text-sm font-semibold text-undc-600 transition hover:bg-undc-50">Ver todas las facultades →</a>
+            </div>
+          </div>
+
+          <!-- Posgrado -->
+          <a href="posgrado.html" class="rounded-full px-4 py-2 text-sm font-semibold text-undc-800 transition hover:bg-undc-50 hover:text-undc-600">Posgrado</a>
+        </div>
+
+        <!-- Admisión + botón móvil -->
+        <div class="flex items-center gap-3">
+          <a href="https://admision.undc.edu.pe/" target="_blank" rel="noopener"
+            class="hidden items-center justify-center rounded-full bg-gold-500 px-5 py-2.5 text-sm font-bold text-undc-900 shadow-sm transition hover:-translate-y-0.5 hover:bg-gold-400 sm:inline-flex">
+            Admisión
+          </a>
+          <button id="menuBtn" type="button" aria-label="Abrir menú" aria-expanded="false"
+            class="grid h-10 w-10 place-items-center rounded-lg border border-slate-200 text-undc-800 transition hover:bg-slate-50 lg:hidden">
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5"/></svg>
+          </button>
+        </div>
+      </nav>
+
+      <!-- MENÚ MÓVIL (acordeón) -->
+      <div id="mobileMenu" class="hidden border-t border-slate-200 bg-white lg:hidden">
+        <div class="mx-auto max-w-7xl px-6 py-4">
+
+          <div class="border-b border-slate-100">
+            <button type="button" data-accordion-trigger aria-expanded="false"
+              class="flex w-full items-center justify-between py-4 text-left text-sm font-semibold text-undc-800">
+              Universidad
+              <svg data-chevron class="h-4 w-4 text-undc-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
+            </button>
+            <div data-accordion-panel>
+              <div class="flex flex-col gap-1 pb-3">
+                <a href="resena-historica.html" class="rounded-lg px-3 py-2 text-sm text-slate-600 hover:bg-undc-50 hover:text-undc-700">→ Reseña histórica</a>
+                <a href="mision-vision.html" class="rounded-lg px-3 py-2 text-sm text-slate-600 hover:bg-undc-50 hover:text-undc-700">→ Misión y visión</a>
+                <a href="rectorado.html" class="rounded-lg px-3 py-2 text-sm text-slate-600 hover:bg-undc-50 hover:text-undc-700">→ Rectorado</a>
+                <a href="documentos.html" class="rounded-lg px-3 py-2 text-sm text-slate-600 hover:bg-undc-50 hover:text-undc-700">→ Documentos UNDC</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="border-b border-slate-100">
+            <button type="button" data-accordion-trigger aria-expanded="false"
+              class="flex w-full items-center justify-between py-4 text-left text-sm font-semibold text-undc-800">
+              Facultades
+              <svg data-chevron class="h-4 w-4 text-undc-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
+            </button>
+            <div data-accordion-panel>
+              <div class="flex flex-col gap-3 pb-4">
+                <div>
+                  <p class="px-3 text-xs font-bold uppercase tracking-wider text-undc-600">Ciencias Empresariales</p>
+                  <a href="administracion.html" class="block rounded-lg px-3 py-1.5 text-sm text-slate-600 hover:bg-undc-50 hover:text-undc-700">→ Administración</a>
+                  <a href="derecho.html" class="block rounded-lg px-3 py-1.5 text-sm text-slate-600 hover:bg-undc-50 hover:text-undc-700">→ Derecho</a>
+                  <a href="contabilidad.html" class="block rounded-lg px-3 py-1.5 text-sm text-slate-600 hover:bg-undc-50 hover:text-undc-700">→ Contabilidad</a>
+                  <a href="turismo-hoteleria.html" class="block rounded-lg px-3 py-1.5 text-sm text-slate-600 hover:bg-undc-50 hover:text-undc-700">→ Hotelería y Turismo</a>
+                </div>
+                <div>
+                  <p class="px-3 text-xs font-bold uppercase tracking-wider text-undc-600">Ingeniería</p>
+                  <a href="ingenieria-sistemas.html" class="block rounded-lg px-3 py-1.5 text-sm text-slate-600 hover:bg-undc-50 hover:text-undc-700">→ Ingeniería de Sistemas</a>
+                </div>
+                <div>
+                  <p class="px-3 text-xs font-bold uppercase tracking-wider text-undc-600">Ciencias Agrarias</p>
+                  <a href="agronomia.html" class="block rounded-lg px-3 py-1.5 text-sm text-slate-600 hover:bg-undc-50 hover:text-undc-700">→ Agronomía</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <a href="posgrado.html" class="block border-b border-slate-100 py-4 text-sm font-semibold text-undc-800">Posgrado</a>
+          <a href="https://admision.undc.edu.pe/" target="_blank" rel="noopener"
+            class="mt-4 flex items-center justify-center rounded-full bg-gold-500 px-5 py-3 text-sm font-bold text-undc-900">
+            Admisión
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===== HERO DE LA CARRERA ===== -->
+    <section class="relative overflow-hidden bg-undc-900 text-white">
+      <div class="absolute inset-0 bg-gradient-to-br from-undc-900 via-undc-800 to-undc-900"></div>
+      <div class="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-gold-500/20 blur-3xl"></div>
+      <div class="pointer-events-none absolute -bottom-24 -left-20 h-72 w-72 rounded-full bg-gold-500/10 blur-3xl animate-float-slow"></div>
+
+      <div class="relative mx-auto max-w-7xl px-6 py-16 lg:px-8 lg:py-24">
+        <nav class="text-sm text-blue-100/80">
+          <a href="index.html" class="hover:text-white">Inicio</a>
+          <span class="mx-2">/</span>
+          <a href="facultades.html" class="hover:text-white">Facultades</a>
+          <span class="mx-2">/</span>
+          <span class="text-white">Administración de Turismo y Hotelería</span>
+        </nav>
+
+        <div class="mt-6 flex items-center gap-5 animate-slide-up">
+          <span class="grid h-16 w-16 shrink-0 place-items-center rounded-2xl backdrop-blur bg-gold-500/15 text-gold-400 ring-1 ring-inset ring-gold-400/30"><svg class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418"/></svg></span>
+          <div>
+            <p class="text-xs font-bold uppercase tracking-[0.25em] text-gold-400">Facultad de Ciencias Empresariales</p>
+            <h1 class="mt-1 text-4xl font-black tracking-tight lg:text-5xl">Administración de Turismo y Hotelería</h1>
+          </div>
+        </div>
+
+        <p class="mt-5 max-w-2xl text-blue-50/90 animate-slide-up">Escuela Profesional de Administración de Turismo y Hotelería · Facultad de Ciencias Empresariales</p>
+      </div>
+    </section>
+
+    <!-- ===== AUTORIDADES + CONTENIDO ===== -->
+    <section class="mx-auto max-w-5xl px-6 py-16 lg:px-8">
+
+      <!-- Autoridades -->
+      <div class="grid gap-6 sm:grid-cols-2">
+        <div data-reveal class="group rounded-3xl border border-slate-200 bg-white p-6 text-center shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-card">
+          <div class="relative mx-auto h-40 w-40 overflow-hidden rounded-2xl bg-undc-50">
+            <div class="absolute inset-0 grid place-items-center text-undc-300"><svg class="h-16 w-16" fill="none" stroke="currentColor" stroke-width="1.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.5 20.25a8.25 8.25 0 0115 0"/></svg></div>
+            <img src="public/admi1.png" alt="Dr. Roberto Reymundo Buendía Aparcana" class="relative h-full w-full object-cover transition duration-500 group-hover:scale-105" onerror="this.style.display='none'">
+          </div>
+          <p class="mt-5 inline-block rounded-full bg-undc-50 px-3 py-1 text-xs font-bold uppercase tracking-wider text-undc-600">Decano de la Facultad de Ciencias Empresariales</p>
+          <p class="mt-2 text-lg font-extrabold text-undc-900">Dr. Roberto Reymundo Buendía Aparcana</p>
+        </div>
+        <div data-reveal class="group rounded-3xl border border-slate-200 bg-white p-6 text-center shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-card">
+          <div class="relative mx-auto h-40 w-40 overflow-hidden rounded-2xl bg-undc-50">
+            <div class="absolute inset-0 grid place-items-center text-undc-300"><svg class="h-16 w-16" fill="none" stroke="currentColor" stroke-width="1.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.5 20.25a8.25 8.25 0 0115 0"/></svg></div>
+            <img src="public/director-turismo.png" alt="Dr. Manuel Alberto Luis Manrique Nugent" class="relative h-full w-full object-cover transition duration-500 group-hover:scale-105" onerror="this.style.display='none'">
+          </div>
+          <p class="mt-5 inline-block rounded-full bg-undc-50 px-3 py-1 text-xs font-bold uppercase tracking-wider text-undc-600">Director de la Escuela Profesional de Administración de Turismo y Hotelería</p>
+          <p class="mt-2 text-lg font-extrabold text-undc-900">Dr. Manuel Alberto Luis Manrique Nugent</p>
+        </div>
+      </div>
+
+      <!-- Secciones desplegables -->
+      <div class="mt-12 space-y-3">
+        <details data-reveal class="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:shadow-card">
+          <summary class="flex cursor-pointer list-none items-center gap-4 p-5">
+            <span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-undc-50 text-undc-600 transition group-hover:bg-undc-600 group-hover:text-white"><svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"/></svg></span>
+            <span class="flex-1 text-base font-extrabold text-undc-900">Modelo Educativo</span>
+            <span class="grid h-8 w-8 shrink-0 place-items-center rounded-full border border-slate-200 text-undc-400 transition-transform duration-300 group-open:rotate-180"><svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg></span>
+          </summary>
+          <div class="border-t border-slate-100 px-5 py-5 text-sm leading-relaxed text-slate-600">
+        <p><a class="text-undc-700 underline transition hover:text-undc-900" href="https://drive.google.com/file/d/1P_BcTlWmPHXQiwVn65Z66rHkB_wdyzFS/view?usp=sharing" target="_blank" rel="noopener">Modelo Educativo aprobado con Resolución de Comisión Organizadora 241-2023-UNDC</a></p>
+          </div>
+        </details>
+        <details data-reveal class="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:shadow-card">
+          <summary class="flex cursor-pointer list-none items-center gap-4 p-5">
+            <span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-undc-50 text-undc-600 transition group-hover:bg-undc-600 group-hover:text-white"><svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.5 20.25a8.25 8.25 0 0115 0"/></svg></span>
+            <span class="flex-1 text-base font-extrabold text-undc-900">Perfil Profesional</span>
+            <span class="grid h-8 w-8 shrink-0 place-items-center rounded-full border border-slate-200 text-undc-400 transition-transform duration-300 group-open:rotate-180"><svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg></span>
+          </summary>
+          <div class="border-t border-slate-100 px-5 py-5 text-sm leading-relaxed text-slate-600">
+        <p>El egresado del Programa Profesional de Administración de Turismo y Hotelería estará en condiciones de gestionar el proceso administrativo de las organizaciones turísticas y hoteleras del entorno global, para el logro de sus objetivos a través del turismo y la gestión pública, la hotelería y restauración, las agencias de viajes, las finanzas, el marketing y la dirección estratégica e investigación, en concordancia con los marcos éticos y normativos en los que se desempeña.</p>
+          </div>
+        </details>
+        <details data-reveal class="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:shadow-card">
+          <summary class="flex cursor-pointer list-none items-center gap-4 p-5">
+            <span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-undc-50 text-undc-600 transition group-hover:bg-undc-600 group-hover:text-white"><svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 00-.491 6.347A48.62 48.62 0 0112 20.904a48.62 48.62 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.636 50.636 0 00-2.658-.813A59.906 59.906 0 0112 3.493a59.903 59.903 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5"/></svg></span>
+            <span class="flex-1 text-base font-extrabold text-undc-900">Grados y Títulos</span>
+            <span class="grid h-8 w-8 shrink-0 place-items-center rounded-full border border-slate-200 text-undc-400 transition-transform duration-300 group-open:rotate-180"><svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg></span>
+          </summary>
+          <div class="border-t border-slate-100 px-5 py-5 text-sm leading-relaxed text-slate-600">
+        <ul class="list-disc space-y-2 pl-5">
+          <li><strong class="text-slate-800">Grado académico:</strong> Bachiller en Administración de Turismo y Hotelería</li>
+          <li><strong class="text-slate-800">Título profesional:</strong> Licenciado en Administración de Turismo y Hotelería</li>
+        </ul>
+          </div>
+        </details>
+        <details data-reveal class="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:shadow-card">
+          <summary class="flex cursor-pointer list-none items-center gap-4 p-5">
+            <span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-undc-50 text-undc-600 transition group-hover:bg-undc-600 group-hover:text-white"><svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 14.15v4.073a2.25 2.25 0 01-1.591 2.163 41.913 41.913 0 01-12.318 0A2.25 2.25 0 014.75 18.125V14.15M16.5 6.75V5.25a2.25 2.25 0 00-2.25-2.25h-4.5A2.25 2.25 0 007.5 5.25v1.5m-3.75 7.4V12a2.25 2.25 0 012.25-2.25h12a2.25 2.25 0 012.25 2.25v2.15m-16.5 0a48.62 48.62 0 0016.5 0"/></svg></span>
+            <span class="flex-1 text-base font-extrabold text-undc-900">Campo Laboral</span>
+            <span class="grid h-8 w-8 shrink-0 place-items-center rounded-full border border-slate-200 text-undc-400 transition-transform duration-300 group-open:rotate-180"><svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg></span>
+          </summary>
+          <div class="border-t border-slate-100 px-5 py-5 text-sm leading-relaxed text-slate-600">
+        <ul class="list-disc space-y-2 pl-5">
+          <li>Gerencia de servicios turísticos: agencias de viajes, tours operadoras y animación.</li>
+          <li>Gerencia de establecimientos de alimentos y bebidas.</li>
+          <li>Gerencia hotelera.</li>
+          <li>Planificación y desarrollo de empresas de servicios turísticos y hoteleros.</li>
+          <li>Análisis de rentabilidad y diagnóstico de empresas turísticas.</li>
+          <li>Investigación y planes de desarrollo turístico.</li>
+          <li>Docencia universitaria y asesoría de empresas del sector.</li>
+        </ul>
+          </div>
+        </details>
+        <details data-reveal class="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:shadow-card">
+          <summary class="flex cursor-pointer list-none items-center gap-4 p-5">
+            <span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-undc-50 text-undc-600 transition group-hover:bg-undc-600 group-hover:text-white"><svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 6.75V15m6-9v8.25m.75-9.75h-7.5A2.25 2.25 0 006 6.75v10.5A2.25 2.25 0 008.25 19.5h7.5A2.25 2.25 0 0018 17.25V6.75A2.25 2.25 0 0015.75 4.5z"/></svg></span>
+            <span class="flex-1 text-base font-extrabold text-undc-900">Malla Curricular</span>
+            <span class="grid h-8 w-8 shrink-0 place-items-center rounded-full border border-slate-200 text-undc-400 transition-transform duration-300 group-open:rotate-180"><svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg></span>
+          </summary>
+          <div class="border-t border-slate-100 px-5 py-5 text-sm leading-relaxed text-slate-600">
+        <ul class="list-disc space-y-2 pl-5">
+          <li><a class="text-undc-700 underline transition hover:text-undc-900" href="https://drive.google.com/file/d/1ioG9A4bkUEGZepMRj4VCx6RVDnBKb5xT/view?usp=sharing" target="_blank" rel="noopener">Plan de Estudio de Administración de Turismo y Hotelería</a></li>
+          <li><a class="text-undc-700 underline transition hover:text-undc-900" href="https://drive.google.com/drive/folders/117PwhOttfEzo1Ew_nDENL4lvmYG51H2q?usp=sharing" target="_blank" rel="noopener">Horario de clases 2026-I</a></li>
+        </ul>
+          </div>
+        </details>
+        <details data-reveal class="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:shadow-card">
+          <summary class="flex cursor-pointer list-none items-center gap-4 p-5">
+            <span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-undc-50 text-undc-600 transition group-hover:bg-undc-600 group-hover:text-white"><svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9 9 0 100-18 9 9 0 000 18zm0-4.5a4.5 4.5 0 100-9 4.5 4.5 0 000 9zm0-4.5a.75.75 0 100-1.5.75.75 0 000 1.5z"/></svg></span>
+            <span class="flex-1 text-base font-extrabold text-undc-900">Objetivos Académicos</span>
+            <span class="grid h-8 w-8 shrink-0 place-items-center rounded-full border border-slate-200 text-undc-400 transition-transform duration-300 group-open:rotate-180"><svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg></span>
+          </summary>
+          <div class="border-t border-slate-100 px-5 py-5 text-sm leading-relaxed text-slate-600">
+        <p><strong class="text-slate-800">Objetivo general:</strong> formar profesionales en Administración de Turismo y Hotelería con sólidas capacidades, competencias y conocimientos que les permitan desempeñarse en el mercado turístico regional, nacional e internacional, con responsabilidad social, cultural y ambiental.</p>
+        <ul class="mt-3 list-disc space-y-2 pl-5">
+          <li>Formar integralmente a los estudiantes en lo académico, científico y humanístico, incentivando la creatividad, investigación e innovación en la actividad turística.</li>
+          <li>Contribuir al conocimiento de la actividad turística, desarrollando capacidades para la gestión eficaz de las organizaciones.</li>
+          <li>Incentivar la investigación aplicada para generar conocimiento e innovación en la gestión turística.</li>
+          <li>Gestionar la ejecución de proyectos de investigación en la actividad turística.</li>
+        </ul>
+          </div>
+        </details>
+      </div>
+
+    </section>
+
+  </main>
+
+  <script src="js/reveal.js"></script>
+
+<footer class="bg-undc-900 text-slate-300">
+    <div class="mx-auto max-w-7xl px-6 py-16 lg:px-8">
+      <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-12">
+
+        <div class="lg:col-span-3">
+          <div class="flex items-center gap-3">
+            <span class="relative flex h-12 w-12 shrink-0 items-center justify-center">
+              <span class="absolute inset-0 rounded-xl bg-undc-600"></span>
+              <span class="relative text-sm font-extrabold tracking-tight text-white">UNDC</span>
+            </span>
+            <div class="leading-tight">
+              <p class="text-sm font-extrabold text-white">UNIVERSIDAD NACIONAL</p>
+              <p class="text-xs font-medium text-slate-400">DE CAÑETE</p>
+            </div>
+          </div>
+          <p class="mt-5 text-sm leading-relaxed text-slate-400">
+            Formación, investigación e innovación para el desarrollo de Cañete y del país.
+          </p>
+        </div>
+
+        <div class="lg:col-span-3">
+          <h3 class="text-sm font-bold text-white">Universidad</h3>
+          <ul class="mt-4 space-y-3 text-sm">
+            <li><a href="resena-historica.html" class="transition hover:text-gold-400">Reseña histórica</a></li>
+            <li><a href="mision-vision.html" class="transition hover:text-gold-400">Misión y visión</a></li>
+            <li><a href="rectorado.html" class="transition hover:text-gold-400">Rectorado</a></li>
+            <li><a href="documentos.html" class="transition hover:text-gold-400">Documentos UNDC</a></li>
+          </ul>
+        </div>
+
+        <div class="lg:col-span-2">
+          <h3 class="text-sm font-bold text-white">Facultades</h3>
+          <ul class="mt-4 space-y-3 text-sm">
+            <li><a href="ciencias-empresariales.html" class="transition hover:text-gold-400">Ciencias Empresariales</a></li>
+            <li><a href="ingenieria.html" class="transition hover:text-gold-400">Ingeniería</a></li>
+            <li><a href="ciencias-agrarias.html" class="transition hover:text-gold-400">Ciencias Agrarias</a></li>
+          </ul>
+        </div>
+
+        <div class="lg:col-span-2">
+          <h3 class="text-sm font-bold text-white">Enlaces</h3>
+          <ul class="mt-4 space-y-3 text-sm">
+            <li><a href="posgrado.html" class="transition hover:text-gold-400">Posgrado</a></li>
+            <li><a href="https://admision.undc.edu.pe/" target="_blank" rel="noopener" class="transition hover:text-gold-400">Admisión</a></li>
+            <li><a href="#" class="transition hover:text-gold-400">Transparencia</a></li>
+            <li><a href="https://tramite.undc.edu.pe/" target="_blank" rel="noopener" class="transition hover:text-gold-400">Trámite documentario</a></li>
+          </ul>
+        </div>
+
+        <div class="lg:col-span-2">
+          <h3 class="text-sm font-bold text-white">Contacto</h3>
+          <ul class="mt-4 space-y-3 text-sm">
+            <li><a href="tel:+51063421365" class="transition hover:text-gold-400">(063) 421365</a></li>
+            <li><a href="mailto:tramite@undc.edu.pe" class="transition hover:text-gold-400">tramite@undc.edu.pe</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-12 flex flex-col justify-between gap-4 border-t border-white/10 pt-7 text-sm text-slate-500 md:flex-row">
+        <p>© 2026 Universidad Nacional de Cañete. Todos los derechos reservados.</p>
+        <div class="flex gap-5">
+          <a href="#" class="transition hover:text-white">Privacidad</a>
+          <a href="#" class="transition hover:text-white">Términos</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= JAVASCRIPT ================= -->
+  <!-- main.js     → menú móvil + dropdowns de la barra -->
+  <script src="js/main.js"></script>
+  <!-- carousel.js → carrusel de eventos (solo se usa en el inicio) -->
+  <script src="js/carousel.js"></script>
+</body>
+</html>

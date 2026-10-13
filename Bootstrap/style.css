@@ -1,0 +1,1308 @@
+/* ==============================================
+   VARIABLES INSTITUCIONALES - UNDC
+   ============================================== */
+:root {
+    --undc-azul: #003366;
+    --undc-azul-oscuro: #002244;
+    --undc-azul-claro: #004080;
+    --undc-verde: #006B3F;
+    --undc-verde-claro: #00995a;
+    --undc-rojo: #8B1A3A;
+    --undc-rojo-claro: #b22348;
+    --undc-texto-claro: #ffffff;
+    --undc-gris-fondo: #f4f6f8;
+    --undc-gris-borde: #e2e6ea;
+    --undc-texto: #333;
+    --undc-texto-muted: #666;
+}
+
+/* ==============================================
+   GLOBAL
+   ============================================== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: var(--undc-texto);
+    line-height: 1.6;
+    margin: 0;
+}
+
+a {
+    color: var(--undc-azul);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--undc-azul-claro);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ==============================================
+   FADE-IN ANIMATION
+   ============================================== */
+.fade-in {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ==============================================
+   BARRA INSTITUCIONAL
+   ============================================== */
+.barra-info {
+    background-color: var(--undc-azul-oscuro);
+    color: var(--undc-texto-claro);
+    font-size: 0.8rem;
+    padding: 0.4rem 0;
+    line-height: 1.6;
+}
+
+.barra-info a {
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.barra-info a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.barra-info .separador {
+    color: rgba(255, 255, 255, 0.35);
+    margin: 0 0.35rem;
+    user-select: none;
+}
+
+.barra-info .info-fila {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.15rem;
+}
+
+@media (max-width: 575.98px) {
+    .barra-info {
+        font-size: 0.72rem;
+        text-align: center;
+    }
+
+    .barra-info .info-fila {
+        justify-content: center;
+    }
+
+    .barra-info .separador {
+        margin: 0 0.2rem;
+    }
+}
+
+/* ==============================================
+   NAVBAR
+   ============================================== */
+.navbar-undc {
+    background-color: transparent;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    padding: 0.5rem 1rem;
+}
+
+.navbar-undc.scrolled-solido {
+    background-color: var(--undc-azul-oscuro);
+    box-shadow: 0 2px 14px rgba(0, 0, 0, 0.25);
+}
+
+.navbar-undc .navbar-brand {
+    color: var(--undc-texto-claro);
+    font-weight: 700;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    text-decoration: none;
+}
+
+.navbar-undc .navbar-brand:hover {
+    color: #e0e0e0;
+}
+
+.navbar-undc .navbar-logo {
+    height: 45px;
+    width: auto;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.navbar-undc .navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.navbar-undc .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.9%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-undc .nav-link {
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+    padding: 0.6rem 1rem;
+    transition: color 0.2s ease, background-color 0.2s ease;
+    font-size: 0.92rem;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-undc .nav-link:hover,
+.navbar-undc .nav-link:focus {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.navbar-undc .nav-link.active {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Dropdown menus */
+.navbar-undc .dropdown-menu {
+    background-color: #ffffff;
+    border: none;
+    border-radius: 0 0 6px 6px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    padding: 0.5rem 0;
+    margin-top: 0;
+}
+
+.navbar-undc .dropdown-item {
+    padding: 0.45rem 1.2rem;
+    font-size: 0.9rem;
+    color: #333;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.navbar-undc .dropdown-item:hover,
+.navbar-undc .dropdown-item:focus {
+    background-color: var(--undc-azul);
+    color: #ffffff;
+}
+
+.navbar-undc .dropdown-item.active {
+    background-color: var(--undc-azul);
+    color: #ffffff;
+}
+
+.dropdown-divider-undc {
+    border-color: #e0e0e0;
+    margin: 0.25rem 0;
+}
+
+/* Submenú anidado (facultades -> carreras) */
+.navbar-undc .dropdown-submenu > .dropdown-menu {
+    display: none;
+}
+
+@media (min-width: 992px) {
+    .navbar-undc .dropdown-submenu > .dropdown-menu {
+        position: static;
+        background-color: transparent;
+        box-shadow: none;
+        border-radius: 0;
+        padding: 0 0 0.25rem 1rem;
+    }
+
+    .navbar-undc .dropdown-submenu:hover > .dropdown-menu {
+        display: block;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .navbar-undc .dropdown-submenu > .dropdown-menu {
+        display: block;
+    }
+}
+
+/* ADMISION Button */
+.btn-admision {
+    background-color: var(--undc-verde);
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.88rem;
+    padding: 0.5rem 1.2rem;
+    border-radius: 6px;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+    white-space: nowrap;
+}
+
+.btn-admision:hover {
+    background-color: var(--undc-verde-claro);
+    color: #ffffff;
+    transform: translateY(-1px);
+}
+
+/* Navbar responsive */
+@media (max-width: 991.98px) {
+    .navbar-undc .navbar-collapse {
+        padding: 0.5rem 0;
+    }
+
+    .navbar-undc .nav-link {
+        padding: 0.6rem 0;
+    }
+
+    .navbar-undc .navbar-logo {
+        height: 40px;
+    }
+
+    .navbar-undc .dropdown-menu {
+        box-shadow: none;
+        border-radius: 0;
+        padding-left: 0.5rem;
+    }
+
+    .btn-admision {
+        margin-top: 0.5rem;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* ==============================================
+   HERO: NAVBAR TRANSPARENTE SOBRE EL CARRUSEL
+   ============================================== */
+.hero-header {
+    position: relative;
+}
+
+.navbar-undc.navbar-hero {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1030;
+    background-color: transparent;
+    background-image: linear-gradient(to bottom, rgba(0, 34, 68, 0.75) 0%, rgba(0, 34, 68, 0) 100%);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar-undc.navbar-hero.scrolled {
+    position: fixed;
+    background-color: var(--undc-azul-oscuro);
+    background-image: none;
+    box-shadow: 0 2px 14px rgba(0, 0, 0, 0.25);
+}
+
+.navbar-undc.navbar-hero .nav-link {
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.45);
+}
+
+.navbar-undc.navbar-hero .nav-link:hover,
+.navbar-undc.navbar-hero .nav-link:focus {
+    text-shadow: none;
+}
+
+@media (max-width: 991.98px) {
+    .navbar-undc.navbar-hero .navbar-collapse {
+        background-color: var(--undc-azul-oscuro);
+        border-radius: 8px;
+        padding: 0.5rem 0.75rem;
+        margin-top: 0.5rem;
+    }
+}
+
+/* ==============================================
+   CAROUSEL
+   ============================================== */
+.carousel-undc {
+    margin-bottom: 0;
+}
+
+.carousel-undc .carousel-item {
+    height: 560px;
+}
+
+.carousel-undc .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(0, 34, 68, 0.88) 0%, rgba(0, 34, 68, 0.3) 50%, rgba(0, 34, 68, 0.1) 100%);
+    z-index: 1;
+}
+
+.carousel-undc .carousel-caption {
+    z-index: 2;
+    padding: 3rem 2rem 2.5rem;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.carousel-undc .carousel-caption h1 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+    margin-bottom: 0.5rem;
+}
+
+.carousel-undc .carousel-caption p {
+    font-size: 1.15rem;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
+    margin-bottom: 1.2rem;
+}
+
+.btn-cta {
+    background-color: var(--undc-verde);
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.65rem 2rem;
+    border-radius: 6px;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.btn-cta:hover {
+    background-color: var(--undc-verde-claro);
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.carousel-undc .carousel-control-prev,
+.carousel-undc .carousel-control-next {
+    width: 8%;
+    opacity: 0.7;
+}
+
+.carousel-undc .carousel-control-prev:hover,
+.carousel-undc .carousel-control-next:hover {
+    opacity: 1;
+}
+
+.carousel-undc .carousel-indicators [data-bs-target] {
+    background-color: var(--undc-azul);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 6px;
+}
+
+@media (max-width: 991.98px) {
+    .carousel-undc .carousel-item {
+        height: 420px;
+    }
+
+    .carousel-undc .carousel-caption h1 {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .carousel-undc .carousel-item {
+        height: 340px;
+    }
+
+    .carousel-undc .carousel-caption h1 {
+        font-size: 1.6rem;
+    }
+
+    .carousel-undc .carousel-caption p {
+        font-size: 0.95rem;
+    }
+
+    .carousel-undc .carousel-indicators [data-bs-target] {
+        width: 8px;
+        height: 8px;
+        margin: 0 4px;
+    }
+}
+
+/* ==============================================
+   SECTION HEADERS
+   ============================================== */
+.section-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.section-header h2 {
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+
+.section-header p {
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+
+/* ==============================================
+   EVENTOS
+   ============================================== */
+.section-undc {
+    background-color: var(--undc-azul-oscuro);
+    color: #fff;
+    padding: 3.5rem 0;
+}
+
+.section-undc h2,
+.section-undc h3 {
+    color: #fff;
+}
+
+.section-undc p {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+/* Carrusel de eventos */
+.carousel-eventos {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.carousel-eventos .carousel-item {
+    height: 460px;
+    background-color: var(--undc-azul-oscuro);
+}
+
+.carousel-eventos .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.carousel-eventos .carousel-control-prev,
+.carousel-eventos .carousel-control-next {
+    width: 12%;
+    opacity: 0.75;
+}
+
+.carousel-eventos .carousel-control-prev:hover,
+.carousel-eventos .carousel-control-next:hover {
+    opacity: 1;
+}
+
+.carousel-eventos .carousel-indicators [data-bs-target] {
+    background-color: #fff;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    margin: 0 5px;
+    opacity: 0.6;
+}
+
+.carousel-eventos .carousel-indicators .active {
+    opacity: 1;
+}
+
+/* Mini tarjetas de eventos */
+.eventos-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.card-evento-mini {
+    background: #fff;
+    border-radius: 8px;
+    border-left: 3px solid var(--undc-verde);
+    padding: 0.85rem 1.1rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-evento-mini:hover {
+    transform: translateX(4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+.card-evento-mini .evento-mini-fecha {
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--undc-verde);
+    margin: 0 0 0.3rem;
+}
+
+.card-evento-mini .evento-mini-titulo {
+    font-size: 0.86rem;
+    font-weight: 600;
+    line-height: 1.4;
+    color: var(--undc-azul);
+    margin: 0 0 0.35rem;
+}
+
+.card-evento-mini .evento-mini-hora {
+    font-size: 0.75rem;
+    color: var(--undc-texto-muted);
+    margin: 0;
+}
+
+.card-evento-mini .evento-mini-hora i {
+    margin-right: 0.3rem;
+}
+
+@media (max-width: 991.98px) {
+    .carousel-eventos .carousel-item {
+        height: 340px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .carousel-eventos .carousel-item {
+        height: 260px;
+    }
+}
+
+/* ==============================================
+   NOTICIAS
+   ============================================== */
+.section-noticias {
+    background-color: var(--undc-gris-fondo);
+    padding: 3.5rem 0;
+}
+
+.card-noticia {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    height: 100%;
+    background: #fff;
+}
+
+.card-noticia:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.15);
+}
+
+.card-noticia .card-img-top {
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-noticia .card-body {
+    padding: 1.25rem;
+}
+
+.card-noticia .noticia-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.6rem;
+}
+
+.card-noticia .noticia-fecha {
+    font-size: 0.8rem;
+    color: #999;
+}
+
+.card-noticia .card-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--undc-azul);
+    margin-bottom: 0.5rem;
+}
+
+.card-noticia .card-text {
+    font-size: 0.88rem;
+    color: var(--undc-texto-muted);
+    line-height: 1.5;
+}
+
+.card-noticia .btn-link {
+    color: var(--undc-azul);
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.card-noticia .btn-link:hover {
+    color: var(--undc-azul-claro);
+}
+
+/* ==============================================
+   FACULTADES
+   ============================================== */
+.section-facultades {
+    padding: 3.5rem 0;
+}
+
+.card-facultad {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    height: 100%;
+    background: #fff;
+}
+
+.card-facultad:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.15);
+}
+
+.card-facultad .card-img-top {
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-facultad .card-body {
+    padding: 1.25rem;
+    text-align: center;
+}
+
+.card-facultad .facultad-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    color: #fff;
+    margin: -48px auto 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.card-facultad .facultad-icon.icon-azul {
+    background: linear-gradient(135deg, var(--undc-azul), var(--undc-azul-claro));
+}
+
+.card-facultad .facultad-icon.icon-verde {
+    background: linear-gradient(135deg, var(--undc-verde), var(--undc-verde-claro));
+}
+
+.card-facultad .facultad-icon.icon-rojo {
+    background: linear-gradient(135deg, var(--undc-rojo), var(--undc-rojo-claro));
+}
+
+.card-facultad .card-title {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--undc-azul);
+}
+
+.card-facultad .card-text {
+    color: var(--undc-texto-muted);
+    font-size: 0.88rem;
+    line-height: 1.5;
+}
+
+.card-facultad .carreras-count {
+    font-size: 0.82rem;
+    color: var(--undc-texto-muted);
+    font-weight: 500;
+}
+
+.card-facultad .carreras-count i {
+    margin-right: 0.25rem;
+}
+
+/* ==============================================
+   SERVICIOS UNIVERSITARIOS
+   ============================================== */
+.section-alt {
+    background-color: var(--undc-gris-fondo);
+    padding: 3.5rem 0;
+}
+
+.card-servicio {
+    border: 1px solid var(--undc-gris-borde);
+    border-radius: 10px;
+    padding: 1.5rem 1rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    height: 100%;
+    background: #fff;
+}
+
+.card-servicio:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    border-color: var(--undc-azul);
+}
+
+.card-servicio .servicio-icon {
+    font-size: 1.8rem;
+    color: var(--undc-azul);
+    margin-bottom: 0.75rem;
+}
+
+.card-servicio h6 {
+    font-weight: 600;
+    font-size: 0.88rem;
+    color: var(--undc-azul);
+    margin: 0;
+}
+
+/* ==============================================
+   ENLACES / TRANSPARENCIA
+   ============================================== */
+.card-enlace {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    height: 100%;
+}
+
+.card-enlace:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.card-enlace i {
+    font-size: 2rem;
+    color: var(--undc-verde);
+    margin-bottom: 0.75rem;
+    display: block;
+}
+
+.card-enlace h6 {
+    color: #fff;
+    font-weight: 500;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* ==============================================
+   CONTACTO
+   ============================================== */
+.section-contacto {
+    background-color: var(--undc-azul);
+    color: #fff;
+    padding: 3.5rem 0;
+}
+
+.section-contacto h2 {
+    color: #fff;
+}
+
+.section-contacto p {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.contacto-lista {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contacto-lista li {
+    padding: 0.5rem 0;
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.contacto-lista li i {
+    color: var(--undc-verde-claro);
+    margin-right: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.contacto-mapa {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* ==============================================
+   PÁGINAS INTERNAS
+   ============================================== */
+.page-header {
+    background-color: var(--undc-azul);
+    background-image: linear-gradient(rgba(0, 34, 68, 0.5), rgba(0, 34, 68, 0.65)), url("Public/nav2.jpg");
+    background-size: cover;
+    background-position: center;
+    color: var(--undc-texto-claro);
+    padding: 2rem 0 1.5rem;
+}
+
+.page-header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+.page-header .lead {
+    font-size: 1rem;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.55);
+    margin-bottom: 0;
+}
+
+.breadcrumb-custom {
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    font-size: 0.85rem;
+}
+
+.breadcrumb-custom .breadcrumb-item a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+}
+
+.breadcrumb-custom .breadcrumb-item a:hover {
+    color: #fff;
+}
+
+.breadcrumb-custom .breadcrumb-item.active {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.breadcrumb-custom .breadcrumb-item + .breadcrumb-item::before {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.page-content {
+    padding: 2.5rem 0 3rem;
+}
+
+.page-content h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--undc-azul);
+    margin-bottom: 1rem;
+    padding-top: 1rem;
+}
+
+.page-content h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--undc-verde);
+    margin-bottom: 0.75rem;
+}
+
+.page-content p {
+    line-height: 1.7;
+    color: #444;
+}
+
+/* Reseña histórica */
+.resena-img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.resena-timeline {
+    margin-top: 1.5rem;
+}
+
+.resena-item {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+}
+
+.resena-item:last-child {
+    margin-bottom: 0;
+}
+
+.resena-num {
+    flex: 0 0 40px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--undc-azul);
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.resena-texto {
+    flex: 1;
+    background: var(--undc-gris-fondo);
+    border-left: 3px solid var(--undc-verde);
+    border-radius: 10px;
+    padding: 1rem 1.25rem;
+}
+
+.resena-texto p {
+    margin: 0;
+}
+
+/* ==============================================
+   TARJETAS DE FACULTAD (PÁGINAS INTERNAS)
+   ============================================== */
+.facultad-card {
+    border: 1px solid var(--undc-gris-borde);
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    transition: box-shadow 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+    background: #fff;
+}
+
+/* Variantes de color para tarjetas informativas */
+.card-info-azul {
+    background-color: #e4eefb;
+    border-color: #cfe1f7;
+}
+
+.card-info-verde {
+    background-color: #e3f5ec;
+    border-color: #c7ead9;
+}
+
+.card-info-oro {
+    background-color: #fdf3d9;
+    border-color: #f0e2b0;
+}
+
+.facultad-card:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    border-color: var(--undc-azul);
+    transform: translateY(-2px);
+}
+
+.facultad-card h3 {
+    color: var(--undc-azul);
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.facultad-card p {
+    color: var(--undc-texto-muted);
+    font-size: 0.9rem;
+    margin-bottom: 0;
+}
+
+.facultad-card .carreras-lista {
+    list-style: none;
+    padding: 0;
+    margin: 0.75rem 0 0;
+    font-size: 0.88rem;
+}
+
+.facultad-card .carreras-lista li {
+    padding: 0.25rem 0;
+    color: #555;
+}
+
+.facultad-card .carreras-lista li::before {
+    content: "\2022";
+    color: var(--undc-verde);
+    font-weight: 700;
+    margin-right: 0.5rem;
+}
+
+/* ==============================================
+   FACULTADES - ESCUELAS PROFESIONALES
+   ============================================== */
+.facultad-titulo {
+    color: var(--undc-azul);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.35rem;
+    letter-spacing: 0.02em;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+    border-bottom: 4px solid #f2b705;
+    margin-bottom: 1.75rem;
+}
+
+.escuela-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    height: 100%;
+    text-decoration: none;
+    padding-bottom: 0.85rem;
+    border-bottom: 3px solid #f2b705;
+    transition: transform 0.2s ease;
+}
+
+.escuela-item:hover {
+    transform: translateY(-3px);
+}
+
+.escuela-escudo {
+    width: 84px;
+    height: 84px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.escuela-nombre {
+    color: var(--undc-azul);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.95rem;
+    line-height: 1.35;
+}
+
+.escuela-item:hover .escuela-nombre {
+    color: var(--undc-azul-claro);
+}
+
+/* Página de escuela profesional */
+.escuela-hero-escudo {
+    width: 170px;
+    height: 170px;
+    object-fit: contain;
+}
+
+@media (max-width: 575.98px) {
+    .escuela-hero-escudo {
+        width: 130px;
+        height: 130px;
+    }
+}
+
+/* Autoridades (decano / director) */
+.card-rol {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--undc-verde);
+    margin-bottom: 0.4rem;
+}
+
+.autoridad-foto {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    margin: 0 auto;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: var(--undc-gris-fondo);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.autoridad-foto i {
+    font-size: 4.5rem;
+    color: #c3ccd6;
+}
+
+.autoridad-foto img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+/* Acordeón institucional */
+.acordeon-undc .accordion-item {
+    border: 1px solid #cfe1f7;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 0.6rem;
+}
+
+.acordeon-undc .accordion-button {
+    font-weight: 600;
+    color: var(--undc-azul);
+    background-color: #e4eefb;
+}
+
+.acordeon-undc .accordion-button:hover {
+    background-color: #d8e8fa;
+}
+
+.acordeon-undc .accordion-button:not(.collapsed) {
+    color: var(--undc-azul);
+    background-color: #cee0f7;
+    box-shadow: none;
+}
+
+.acordeon-undc .accordion-button:focus {
+    box-shadow: none;
+    border-color: #cfe1f7;
+}
+
+.acordeon-undc .accordion-button::after {
+    display: none;
+}
+
+.acordeon-undc .acordeon-icono {
+    margin-right: 0.75rem;
+    color: var(--undc-azul);
+    font-weight: 700;
+}
+
+.acordeon-undc .acordeon-icono.menos {
+    display: none;
+}
+
+.acordeon-undc .accordion-button:not(.collapsed) .acordeon-icono.mas {
+    display: none;
+}
+
+.acordeon-undc .accordion-button:not(.collapsed) .acordeon-icono.menos {
+    display: inline-block;
+}
+
+/* ==============================================
+   CARDS INSTITUCIONALES
+   ============================================== */
+.card-undc {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    height: 100%;
+}
+
+.card-undc:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.15);
+}
+
+.card-undc .card-photo {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.card-undc .card-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    color: #fff;
+    margin: 0 auto 1rem;
+}
+
+.card-undc .card-icon.icon-azul {
+    background: linear-gradient(135deg, var(--undc-azul), var(--undc-azul-claro));
+}
+
+.card-undc .card-icon.icon-verde {
+    background: linear-gradient(135deg, var(--undc-verde), var(--undc-verde-claro));
+}
+
+.card-undc .card-icon.icon-rojo {
+    background: linear-gradient(135deg, var(--undc-rojo), var(--undc-rojo-claro));
+}
+
+.card-undc .card-title {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--undc-azul);
+}
+
+.card-undc .card-text {
+    color: var(--undc-texto-muted);
+    font-size: 0.92rem;
+    line-height: 1.6;
+}
+
+/* ==============================================
+   FOOTER
+   ============================================== */
+.footer-undc {
+    background-color: #111111;
+    color: rgba(255, 255, 255, 0.8);
+    padding: 2.5rem 0 1rem;
+    font-size: 0.88rem;
+}
+
+.footer-undc a {
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-undc a:hover {
+    color: #ffffff;
+}
+
+.footer-undc .footer-title {
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+}
+
+.footer-undc ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-undc ul li {
+    padding: 0.2rem 0;
+}
+
+.footer-social {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 0.75rem;
+}
+
+.footer-social a {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.footer-social a:hover {
+    background-color: var(--undc-verde);
+    color: #fff;
+}
+
+.footer-undc .footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    text-align: center;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 767.98px) {
+    .footer-undc {
+        text-align: center;
+    }
+
+    .footer-undc .footer-title {
+        margin-top: 1rem;
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+}

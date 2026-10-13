@@ -1,0 +1,20 @@
+# Taste
+- Prefers HTML pages kept flat in the project root; explicitly rejected a nested `pages/` folder and asked for the files to live directly at the root. Confidence: 0.7
+- Communicates in Spanish (casual, colloquial register). Confidence: 0.75
+- Insists on keeping Tailwind CSS as the styling base and not changing framework (explicitly forbids Bootstrap); states this constraint up front and repeatedly. Confidence: 0.9
+- Avoids unnecessary dependencies and libraries: wants built-in/vanilla solutions (e.g. a hand-written JS carousel instead of a library) and no extra installs when avoidable. Confidence: 0.85
+- Wants the existing project configuration and existing code reused/served where possible rather than replaced. Confidence: 0.8
+- Does not want new images generated; wants existing project images reused, and when an image is missing, a clearly identified placeholder left in place with an explicit comment (e.g. `// REEMPLAZAR CON IMAGEN...`). Confidence: 0.85
+- Prioritizes responsive design and explicitly requires no horizontal scroll at any breakpoint (adapting column/element counts per device). Confidence: 0.75
+- Is learning to program; asks that delivered code be left clean, ordered, and well-commented (in Spanish) so they can read it and edit it themselves (e.g. swapping in images); repeatedly reminds to keep the code "ordenado para poder practicarlo". Confidence: 0.92
+- Prefers readable, beginner-friendly formatting: avoid very long single lines, break markup into several indented lines, and add section headers/guide comments and step-by-step instructions. Confidence: 0.8
+- Wants images actually visible/prominent, not covered by decorative overlays, dark gradient backgrounds, or extra content on top. Confidence: 0.6
+- Wants no leftover placeholder box or visible placeholder text (e.g. `Imagen: public/...`) in the rendered page; the real image should fill the area cleanly. Confidence: 0.6
+- Prefers images shown in full / uncropped ("que salga completo"): when shown a screenshot of cropped photos, asked to adjust them so they appear complete — switching `object-cover` (crops) to `object-contain` inside a taller frame with a light background. Confidence: 0.65
+- Prefers dense informational text presented with visual structure — numbered step/timeline cards instead of a plain block of paragraphs — when asked to make content look "nice". Confidence: 0.55
+- Prefers each navigation section/item — and each content card such as a career/degree — to link to its own dedicated HTML page rather than as in-page anchors within a shared page (asked for every menu item to get its own page, then for each career card to open its corresponding page). Confidence: 0.75
+- Prefers compact dropdown panels (white panel with border and shadow) over large mega-menus for navigation; asked for the Facultades menu to be converted into a dropdown matching the Universidad one. Confidence: 0.7
+- Wants design treatments applied consistently across analogous sections/pages: when one section has a given style, asks for it replicated in sibling sections ("en facultades también has esa escalera"). Confidence: 0.6
+- Likes the "staircase"/connector visual style (items linked by a vertical line with ↓ arrows) for hierarchical lists such as the careers under each faculty. Confidence: 0.6
+- When given reference/demo files (e.g. the `Bootstrap/` folder), wants ONLY the content/information extracted — explicitly not the design, layout or structure copied ("no copies el diseño e arquitectura, sino solo la información") — and the information re-inserted into the current project's own Tailwind design. Confidence: 0.85
+- Likes pages to stand out visually with effects, color accents, and animations, but wants those to harmonize/feel consistent with the rest of the site. Confidence: 0.65
