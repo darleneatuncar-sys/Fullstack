@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GMACADEMY — Notificaciones académicas</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header__inner">
+      <div class="brand">
+        <span class="brand__logo">G</span>
+        <span class="brand__name">GMACADEMY</span>
+      </div>
+      <p class="header__section">Notificaciones académicas</p>
+    </div>
+  </header>
+
+  <main class="container main">
+    <section class="hero">
+      <h1 class="hero__title">Envía tu notificación</h1>
+      <p class="hero__text">
+        Completa el formulario y se enviará un correo de confirmación o notificación
+        al correo registrado por el estudiante.
+      </p>
+    </section>
+
+    <section class="card">
+      <form id="notification-form" novalidate>
+
+        <div class="field">
+          <label for="student-name">Nombre completo del estudiante</label>
+          <input type="text" id="student-name" name="student-name" placeholder="Ej: Ana García López" autocomplete="name" />
+          <small class="field__error" data-error-for="student-name"></small>
+        </div>
+
+        <div class="field">
+          <label for="student-email">Correo electrónico</label>
+          <input type="email" id="student-email" name="student-email" placeholder="Ej: ana@correo.com" autocomplete="email" />
+          <small class="field__error" data-error-for="student-email"></small>
+        </div>
+
+        <div class="field">
+          <label for="message">Mensaje o detalle de la notificación</label>
+          <textarea id="message" name="message" rows="5" placeholder="Escribe aquí el detalle de tu notificación..."></textarea>
+          <small class="field__error" data-error-for="message"></small>
+        </div>
+
+        <button type="submit" id="submit-btn" class="btn">
+          <span class="btn__spinner hidden" aria-hidden="true"></span>
+          <span id="btn-text">Enviar notificación</span>
+        </button>
+      </form>
+
+      <!-- Mensajes de éxito / error / validación -->
+      <div id="form-status" class="status hidden" role="status" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>GMACADEMY © 2026 — Proyecto parcial Desarrollo Web Full Stack</p>
+    </div>
+  </footer>
+
+  <!-- SDK oficial de EmailJS para navegador (CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <!-- Lógica de la aplicación -->
+  <script src="js/app.js"></script>
+</body>
+</html>
